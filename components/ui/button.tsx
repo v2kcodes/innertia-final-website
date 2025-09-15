@@ -76,7 +76,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     // Separate motion props from DOM props to avoid conflicts
-    const { onClick, onMouseEnter, onMouseLeave, ...domProps } = props
+    const {
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onAnimationStart,
+      onAnimationEnd,
+      onAnimationIteration,
+      ...domProps
+    } = props
 
     return (
       <motion.button
