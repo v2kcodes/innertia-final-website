@@ -25,9 +25,9 @@ interface ContactFormData {
 interface SupabaseContactData {
   name: string
   email: string
-  phone?: string
-  company?: string
-  service_interest?: string
+  phone?: string | null
+  company?: string | null
+  service_interest?: string | null
   message: string
   ip_address?: string
   source: string
