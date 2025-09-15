@@ -55,13 +55,6 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, loading = false, icon, rightIcon, children, ...props }, ref) => {
-    const Comp = asChild ? Slot : motion.button
-
-    const motionProps = {
-      whileHover: { scale: 1.02 },
-      whileTap: { scale: 0.98 },
-      transition: { type: "spring", stiffness: 400, damping: 17 }
-    }
 
     if (asChild) {
       return (
