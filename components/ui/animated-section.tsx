@@ -55,8 +55,7 @@ export function AnimatedSection({
   staggerDelay = 0.1,
 }: AnimatedSectionProps) {
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { 
-    threshold,
+  const isInView = useInView(ref, {
     once,
   })
 
