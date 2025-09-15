@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const Card = React.forwardRef<
@@ -20,10 +19,8 @@ const Card = React.forwardRef<
     floating: "bg-white border border-muted-200 shadow-lg animate-float"
   }
 
-  const MotionWrapper = animated ? motion.div : "div"
-
   return (
-    <MotionWrapper
+    <div
       ref={ref}
       className={cn(
         "rounded-xl p-6",
@@ -31,20 +28,10 @@ const Card = React.forwardRef<
         hoverEffect && variant === "default" && "card-hover cursor-pointer",
         className
       )}
-      {...(animated && {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5, ease: "easeOut" },
-        whileHover: hoverEffect ? { 
-          scale: 1.02,
-          y: -4,
-          boxShadow: "0 20px 40px rgba(255, 107, 53, 0.1)"
-        } : undefined
-      })}
       {...props}
     >
       {children}
-    </MotionWrapper>
+    </div>
   )
 })
 Card.displayName = "Card"
