@@ -62,7 +62,7 @@ function validateNewsletterData(data: any): NewsletterData {
   return {
     email: email.trim().toLowerCase(),
     name: name?.trim() || undefined,
-    interests: interests?.filter(i => i.trim().length > 0) || undefined,
+    interests: interests?.filter((i: string) => i.trim().length > 0) || undefined,
     source: source?.trim() || 'website'
   }
 }
