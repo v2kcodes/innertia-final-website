@@ -155,7 +155,7 @@ export function CountUp({
   className,
 }: CountUpProps) {
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.5 })
+  const isInView = useInView(ref, { once: true })
   const [count, setCount] = React.useState(start)
 
   React.useEffect(() => {
