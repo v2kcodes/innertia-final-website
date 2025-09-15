@@ -125,12 +125,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#FF6B35" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={true}
-          disableTransitionOnChange={false}
-        >
+        <ThemeProvider>
           {children}
           <WhatsAppWidget />
         </ThemeProvider>
