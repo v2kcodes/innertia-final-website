@@ -75,27 +75,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       )
     }
 
-    // Separate motion props from DOM props to avoid conflicts
-    const {
-      onClick,
-      onMouseEnter,
-      onMouseLeave,
-      onAnimationStart,
-      onAnimationEnd,
-      onAnimationIteration,
-      ...domProps
-    } = props
-
+    // Use a simple button without motion for compatibility
     return (
-      <motion.button
+      <button
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         disabled={loading || props.disabled}
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        {...motionProps}
-        {...domProps}
+        {...props}
       >
         {loading ? (
           <>
