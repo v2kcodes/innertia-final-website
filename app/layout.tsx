@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { WhatsAppWidget } from '@/components/ui/whatsapp-widget'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -128,6 +129,7 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <WhatsAppWidget />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
