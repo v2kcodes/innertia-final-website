@@ -210,7 +210,7 @@ export function Reveal({
   duration = 0.6,
 }: RevealProps) {
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+  const isInView = useInView(ref, { once: true })
 
   const directionVariants = {
     up: { y: 75 },
@@ -247,7 +247,7 @@ export function StaggeredList({
   itemDelay = 0,
 }: StaggeredListProps) {
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+  const isInView = useInView(ref, { once: true })
 
   const containerVariants = {
     hidden: { opacity: 0 },
