@@ -130,7 +130,7 @@ const FloatingCard = React.forwardRef<
   }
 
   return (
-    <motion.div
+    <div
       ref={cardRef}
       className={cn(
         "rounded-xl p-6 bg-white border border-muted-200 shadow-lg cursor-pointer transition-all duration-300 ease-out preserve-3d",
@@ -138,13 +138,10 @@ const FloatingCard = React.forwardRef<
       )}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
       {...props}
     >
       {children}
-    </motion.div>
+    </div>
   )
 })
 FloatingCard.displayName = "FloatingCard"
