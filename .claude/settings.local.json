@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__supabase__list_projects",
+      "mcp__supabase__list_tables",
+      "mcp__supabase__list_organizations",
+      "mcp__supabase__get_cost",
+      "mcp__playwright__browser_navigate",
+      "Bash(cat:*)",
+      "mcp__github__get_me"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
