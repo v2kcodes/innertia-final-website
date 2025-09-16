@@ -8,7 +8,9 @@
       "mcp__playwright__browser_navigate",
       "Bash(cat:*)",
       "mcp__github__get_me",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(dir:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

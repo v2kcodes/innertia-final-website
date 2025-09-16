@@ -22,11 +22,22 @@
     "ui:add": "npx shadcn-ui@latest add",
     "analyze": "ANALYZE=true next build",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "test:cross-browser": "playwright test tests/cross-browser-compatibility.spec.ts",
+    "test:performance": "playwright test tests/performance-audit.spec.ts --project=performance-chrome",
+    "test:accessibility": "playwright test tests/cross-browser-compatibility.spec.ts --project=accessibility-chrome",
+    "test:mobile": "playwright test --project=mobile-*",
+    "test:desktop": "playwright test --project=*-desktop-*",
+    "test:all-browsers": "playwright test --project=chromium-* --project=firefox-* --project=webkit-* --project=edge-*",
+    "test:comprehensive": "playwright test --reporter=html",
+    "lighthouse:audit": "lighthouse http://localhost:3000 --output=html --output-path=test-results/lighthouse-report.html",
+    "axe:audit": "axe http://localhost:3000 --save test-results/axe-report.json",
+    "audit:full": "npm run lighthouse:audit && npm run axe:audit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-slot": "^1.2.3",
+    "@sentry/nextjs": "^10.12.0",
     "@supabase/ssr": "^0.5.1",
     "@supabase/supabase-js": "^2.45.4",
     "@types/node": "^22.5.5",
@@ -51,9 +62,15 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.47.2",
+    "axe-playwright": "^2.2.2",
+    "canvas": "^3.2.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.13",
-    "prettier": "^3.3.3"
+    "lighthouse": "^12.8.2",
+    "prettier": "^3.3.3",
+    "sharp": "^0.34.3"
   }
 }

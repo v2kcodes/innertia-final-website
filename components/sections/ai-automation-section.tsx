@@ -161,6 +161,7 @@ export function AIAutomationSection() {
                     size="sm"
                     className="opacity-0 group-hover:opacity-100 transition-opacity"
                     onClick={() => setActiveDemo(activeDemo === service.demo ? null : service.demo)}
+                    aria-label={activeDemo === service.demo ? `Pause ${service.title} demo` : `Play ${service.title} demo`}
                   >
                     {activeDemo === service.demo ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                   </Button>

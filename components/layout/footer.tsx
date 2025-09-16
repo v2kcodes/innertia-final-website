@@ -110,17 +110,19 @@ export function Footer() {
                   href={contactInfo.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit Innertia Software Solutions on Instagram"
                   className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white hover:shadow-lg hover:shadow-primary/25 transition-all"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Instagram className="w-5 h-5" />
                 </motion.a>
-                
+
                 <motion.a
                   href={contactInfo.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit Innertia Software Solutions on Facebook"
                   className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white hover:shadow-lg hover:shadow-primary/25 transition-all"
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   whileTap={{ scale: 0.95 }}
