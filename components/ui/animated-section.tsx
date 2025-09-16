@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
+import { MotionDiv } from "@/lib/motion-helpers"
 import { cn } from "@/lib/utils"
 
 interface AnimatedSectionProps {
@@ -75,7 +76,7 @@ export function AnimatedSection({
   } : undefined
 
   return (
-    <motion.div
+    <MotionDiv
       ref={ref}
       className={cn(className)}
       variants={staggerChildren ? containerVariants : undefined}
@@ -89,7 +90,7 @@ export function AnimatedSection({
     >
       {staggerChildren
         ? React.Children.map(children, (child, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               variants={itemVariants}
               transition={{
@@ -98,10 +99,10 @@ export function AnimatedSection({
               }}
             >
               {child}
-            </motion.div>
+            </MotionDiv>
           ))
         : children}
-    </motion.div>
+    </MotionDiv>
   )
 }
 
@@ -128,9 +129,9 @@ export function ParallaxSection({
   const y = useTransform(scrollYProgress, [0, 1], [offset, offset + (speed * 100)])
 
   return (
-    <motion.div ref={ref} className={cn(className)} style={{ y }}>
+    <MotionDiv ref={ref} className={cn(className)} style={{ y }}>
       {children}
-    </motion.div>
+    </MotionDiv>
   )
 }
 
@@ -181,7 +182,7 @@ export function CountUp({
   }, [isInView, end, start, duration, delay])
 
   return (
-    <motion.div
+    <MotionDiv
       ref={ref}
       className={cn("font-bold text-4xl lg:text-5xl gradient-text", className)}
       initial={{ opacity: 0, scale: 0.5 }}
@@ -189,7 +190,7 @@ export function CountUp({
       transition={{ duration: 0.5, delay }}
     >
       {prefix}{Math.floor(count).toLocaleString()}{suffix}
-    </motion.div>
+    </MotionDiv>
   )
 }
 
@@ -221,13 +222,13 @@ export function Reveal({
 
   return (
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, ...directionVariants[direction] }}
         animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...directionVariants[direction] }}
         transition={{ duration, delay, ease: "easeOut" }}
       >
         {children}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }
@@ -273,7 +274,7 @@ export function StaggeredList({
   }
 
   return (
-    <motion.div
+    <MotionDiv
       ref={ref}
       className={cn(className)}
       variants={containerVariants}
@@ -281,11 +282,11 @@ export function StaggeredList({
       animate={isInView ? "visible" : "hidden"}
     >
       {React.Children.map(children, (child, index) => (
-        <motion.div key={index} variants={itemVariants}>
+        <MotionDiv key={index} variants={itemVariants}>
           {child}
-        </motion.div>
+        </MotionDiv>
       ))}
-    </motion.div>
+    </MotionDiv>
   )
 }
 

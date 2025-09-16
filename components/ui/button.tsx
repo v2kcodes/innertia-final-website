@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { MotionButton } from "@/lib/motion-helpers"
 
 import { cn } from "@/lib/utils"
 
@@ -54,6 +55,11 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, loading = false, icon, rightIcon, children, ...props }, ref) => {
+    const motionProps = {
+      whileHover: { scale: 1.02 },
+      whileTap: { scale: 0.98 },
+      transition: { type: "spring", stiffness: 400, damping: 17 }
+    }
 
     if (asChild) {
       return (
@@ -67,12 +73,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       )
     }
 
-    // Use a simple button without motion for compatibility
     return (
-      <button
+      <MotionButton
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         disabled={loading || props.disabled}
+        {...motionProps}
         {...props}
       >
         {loading ? (
@@ -97,7 +103,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {variant === "default" || variant === "gradient" ? (
           <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
         ) : null}
-      </button>
+      </MotionButton>
     )
   }
 )

@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { MotionDiv } from "@/lib/motion-helpers"
 import { cn } from "@/lib/utils"
 
 const Card = React.forwardRef<
@@ -19,8 +20,21 @@ const Card = React.forwardRef<
     floating: "bg-white border border-muted-200 shadow-lg animate-float"
   }
 
+  const motionProps = animated ? {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5, ease: "easeOut" },
+    whileHover: hoverEffect ? {
+      scale: 1.02,
+      y: -4,
+      boxShadow: "0 20px 40px rgba(255, 107, 53, 0.1)"
+    } : undefined
+  } : {}
+
+  const Component = animated ? MotionDiv : "div"
+
   return (
-    <div
+    <Component
       ref={ref}
       className={cn(
         "rounded-xl p-6",
@@ -28,10 +42,11 @@ const Card = React.forwardRef<
         hoverEffect && variant === "default" && "card-hover cursor-pointer",
         className
       )}
+      {...motionProps}
       {...props}
     >
       {children}
-    </div>
+    </Component>
   )
 })
 Card.displayName = "Card"
@@ -130,7 +145,7 @@ const FloatingCard = React.forwardRef<
   }
 
   return (
-    <div
+    <MotionDiv
       ref={cardRef}
       className={cn(
         "rounded-xl p-6 bg-white border border-muted-200 shadow-lg cursor-pointer transition-all duration-300 ease-out preserve-3d",
@@ -138,10 +153,13 @@ const FloatingCard = React.forwardRef<
       )}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       {...props}
     >
       {children}
-    </div>
+    </MotionDiv>
   )
 })
 FloatingCard.displayName = "FloatingCard"

@@ -93,3 +93,4 @@ fix.png
 
 # Development scripts
 *.bat
+.vercel
