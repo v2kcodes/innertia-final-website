@@ -10,7 +10,8 @@
       "mcp__github__get_me",
       "Bash(vercel:*)",
       "Bash(dir:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "mcp__vercel__get_project"
     ],
     "deny": [],
     "ask": []
