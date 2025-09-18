@@ -161,7 +161,7 @@ export function ServicesPreviewSection() {
                   size="lg"
                   className="group"
                 >
-                  Get Started Today
+                  Get Custom Quote in 24h
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

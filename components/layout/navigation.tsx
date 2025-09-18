@@ -130,11 +130,13 @@ export function Navigation() {
             >
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/logos/innertia-logo.png"
-                  alt="Innertia Software Solutions"
+                  src="/logos/innertia-logo.webp"
+                  alt="Innertia Software Solutions - AI Automation & Web Development Company in Namibia"
                   width={40}
                   height={40}
                   className="w-10 h-10 lg:w-12 lg:h-12"
+                  sizes="(max-width: 1024px) 40px, 48px"
+                  priority
                 />
                 <span className="ml-2 text-lg lg:text-xl font-display font-bold gradient-text">
                   Innertia
@@ -217,7 +219,7 @@ export function Navigation() {
                   variant={scrolled ? "default" : "glass"}
                   size="sm"
                 >
-                  Get Started
+                  Get Free Quote
                 </Button>
               </Link>
             </div>
@@ -409,7 +411,7 @@ export function Navigation() {
                         role="menuitem"
                         tabIndex={0}
                       >
-                        Get Started
+                        Get Free Quote
                       </Button>
                     </Link>
                   </motion.div>

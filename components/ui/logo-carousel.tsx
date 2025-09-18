@@ -11,36 +11,42 @@ const trustLogos = [
     src: "/logos/truehorizon.webp",
     width: 120,
     height: 40,
+    alt: "TrueHorizonAI - AI technology partner specializing in machine learning solutions",
   },
   {
     name: "n8n",
-    src: "/logos/n8n logo.png",
+    src: "/logos/n8n logo.webp",
     width: 80,
     height: 40,
+    alt: "n8n - Workflow automation platform for connecting different services and APIs",
   },
   {
     name: "Anthropic",
     src: "/logos/anthropic logo.webp",
     width: 120,
     height: 40,
+    alt: "Anthropic - AI safety company and creator of Claude AI assistant",
   },
   {
     name: "Airtable",
     src: "/logos/airtablelogo.png.webp",
     width: 100,
     height: 40,
+    alt: "Airtable - Cloud collaboration platform combining database and spreadsheet functionality",
   },
   {
     name: "Next.js",
     src: "https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png",
     width: 40,
     height: 40,
+    alt: "Next.js - React framework for production-grade web applications",
   },
   {
     name: "Vercel",
     src: "https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png",
     width: 100,
     height: 40,
+    alt: "Vercel - Frontend cloud platform for static sites and serverless functions",
   },
 ]
 
@@ -93,10 +99,11 @@ export function LogoCarousel({
           >
             <Image
               src={logo.src}
-              alt={`${logo.name} logo`}
+              alt={logo.alt}
               width={logo.width}
               height={logo.height}
               className="h-8 lg:h-10 w-auto object-contain"
+              sizes="(max-width: 1024px) 32px, 40px"
             />
           </motion.div>
         ))}
@@ -120,10 +127,11 @@ export function LogoGrid({ className }: { className?: string }) {
         >
           <Image
             src={logo.src}
-            alt={`${logo.name} logo`}
+            alt={logo.alt}
             width={logo.width}
             height={logo.height}
             className="h-8 lg:h-10 w-auto object-contain"
+            sizes="(max-width: 1024px) 32px, 40px"
           />
         </motion.div>
       ))}
@@ -159,10 +167,11 @@ export function FloatingLogos({ className }: { className?: string }) {
         >
           <Image
             src={logo.src}
-            alt={`${logo.name} logo`}
+            alt={logo.alt}
             width={logo.width}
             height={logo.height}
             className="h-6 lg:h-8 w-auto object-contain"
+            sizes="(max-width: 1024px) 24px, 32px"
           />
         </motion.div>
       ))}
@@ -212,10 +221,11 @@ export function StaggeredLogos({ className }: { className?: string }) {
         >
           <Image
             src={logo.src}
-            alt={`${logo.name} logo`}
+            alt={logo.alt}
             width={logo.width}
             height={logo.height}
             className="h-8 lg:h-10 w-auto object-contain"
+            sizes="(max-width: 1024px) 32px, 40px"
           />
         </motion.div>
       ))}

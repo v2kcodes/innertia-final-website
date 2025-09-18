@@ -68,8 +68,8 @@ export function Footer() {
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/logos/innertia-logo.png"
-                  alt="Innertia Software Solutions"
+                  src="/logos/innertia-logo.webp"
+                  alt="Innertia Software Solutions - AI Automation & Web Development Company in Namibia"
                   width={48}
                   height={48}
                   className="w-12 h-12"

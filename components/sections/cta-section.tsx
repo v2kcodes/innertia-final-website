@@ -57,7 +57,7 @@ export function CTASection() {
             <div>
               <div className="inline-flex items-center px-4 py-2 mb-6 glass rounded-full border border-white/20">
                 <CheckCircle className="w-4 h-4 mr-2 text-accent-400" />
-                <span className="text-sm font-medium">Ready to Get Started?</span>
+                <span className="text-sm font-medium">Transform Your Business Today</span>
               </div>
 
               <GradientText
@@ -69,7 +69,7 @@ export function CTASection() {
                 Let's Build Something Amazing Together
               </GradientText>
 
-              <p className="text-xl text-white/80 leading-relaxed mb-8">
+              <p className="text-xl text-white/90 leading-relaxed mb-8">
                 Whether you need a stunning website, AI automation, or a complete digital transformation, 
                 our team is ready to bring your vision to life.
               </p>
@@ -79,7 +79,7 @@ export function CTASection() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    className="flex items-center text-white/70"
+                    className="flex items-center text-white/90"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -110,7 +110,7 @@ export function CTASection() {
                 </Link>
               </motion.div>
 
-              <p className="text-sm text-white/60">
+              <p className="text-sm text-white/80">
                 No commitment required. Let's discuss your project and explore possibilities.
               </p>
             </div>
@@ -161,7 +161,7 @@ export function CTASection() {
                           </p>
                         </div>
 
-                        <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
+                        <ArrowRight className="w-5 h-5 text-white/70 group-hover:text-white/90 group-hover:translate-x-1 transition-all duration-300" />
                       </div>
                     </motion.a>
                   ))}
@@ -189,7 +189,7 @@ export function CTASection() {
                   transition={{ duration: 0.6, delay: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <p className="text-sm text-white/60 mb-2">
+                  <p className="text-sm text-white/80 mb-2">
                     Join 25+ satisfied clients who transformed their business with our solutions
                   </p>
                   <div className="flex justify-center space-x-1">
@@ -206,7 +206,7 @@ export function CTASection() {
                       </motion.span>
                     ))}
                   </div>
-                  <p className="text-xs text-white/50 mt-1">4.9/5 average client rating</p>
+                  <p className="text-xs text-white/75 mt-1">4.9/5 average client rating</p>
                 </motion.div>
               </CardContent>
             </Card>

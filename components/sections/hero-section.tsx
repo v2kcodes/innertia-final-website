@@ -155,7 +155,7 @@ export function HeroSection() {
                   size="xl"
                   className="group font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0"
                 >
-                  Get Started Today
+                  Get Your Free AI Strategy Consultation
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -167,9 +167,48 @@ export function HeroSection() {
                   className="group text-white border-2 border-white/30 hover:bg-white/10"
                 >
                   <Play className="mr-2 w-5 h-5" />
-                  Explore Services
+                  See Case Studies & Results
                 </Button>
               </Link>
+            </div>
+          </AnimatedSection>
+
+          {/* Lead Capture Form */}
+          <AnimatedSection variant="slideUp" delay={2.2} className="mb-16">
+            <div className="max-w-md mx-auto">
+              <div className="dark-card rounded-xl p-6 text-center">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Get Your Free AI Automation Blueprint
+                </h3>
+                <p className="text-white/80 text-sm mb-4">
+                  Discover which AI solutions can transform your business in just 15 minutes.
+                </p>
+
+                <form className="space-y-3">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/75 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Business Email"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/75 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 rounded-lg transform hover:scale-105 transition-all duration-200"
+                  >
+                    Get My Free Blueprint
+                  </Button>
+                </form>
+
+                <p className="text-white/80 text-xs mt-3">
+                  No spam. Unsubscribe anytime. 100% free consultation.
+                </p>
+              </div>
             </div>
           </AnimatedSection>
 

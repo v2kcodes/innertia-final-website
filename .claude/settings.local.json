@@ -11,7 +11,9 @@
       "Bash(vercel:*)",
       "Bash(dir:*)",
       "Bash(npm run build:*)",
-      "mcp__vercel__get_project"
+      "mcp__vercel__get_project",
+      "mcp__vercel__list_projects",
+      "mcp__vercel__list_deployments"
     ],
     "deny": [],
     "ask": []

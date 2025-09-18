@@ -162,12 +162,12 @@ export function ServicesHeroSection() {
             }}
           >
             <motion.div
-              className="w-1 h-3 bg-white/60 rounded-full mt-2"
+              className="w-1 h-3 bg-white/80 rounded-full mt-2"
               animate={{ height: [8, 16, 8] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
           </motion.div>
-          <p className="text-white/60 text-xs mt-2 uppercase tracking-wide text-center">
+          <p className="text-white/80 text-xs mt-2 uppercase tracking-wide text-center">
             Discover More
           </p>
         </motion.div>
